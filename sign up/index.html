@@ -1,0 +1,147 @@
+<html>
+<head>
+<style>
+#dem
+{
+background-image:url("img.jpeg");
+}
+.a
+{
+background-color: #ffccee;
+height:450px;
+width:400px;
+margin-top:5px;
+padding:10px;
+box-shadow:0px 0px 20px dodgerblue;
+}
+#b
+{
+font-family:serif;
+}
+#c
+{
+font-size:20;
+height:80px;
+width:300px
+}
+#d
+{
+text-align:left;
+}
+#user
+{
+width:350px;
+}
+#us
+{
+width:350px;
+}
+#u
+{
+width:350px;
+}
+#pass
+{
+width:350px;
+}
+#f
+{
+background-color:#0000e6;
+color:white;
+width:350px;
+}
+#g
+{
+color: #b8b894;
+}
+
+#h
+{
+font-size:20;
+color: #b8b894;
+
+}
+@media(max-width:1000px)
+{
+.demo
+{
+background-color:pink;
+width:100px;
+}
+}
+#username
+{
+color:red;
+}
+#lastname
+{
+color:red;
+}
+#email
+{
+color:red;
+}
+#password
+{
+color:red;
+}
+</style>
+</head>
+<body id="dem">
+<script>
+function validateform()
+{
+var firstname=document.getElementById("user").value;
+var lastname=document.getElementById("us").value;
+var password=document.getElementById("pass").value;
+var email=document.getElementById("u").value;
+atpos=email.indexOf("@");
+dotpos=email.lastIndexOf(".");
+if(firstname=="")
+{
+document.getElementById("username").innerHTML=" *Name cant be blank";
+return false;
+}
+else if(lastname==null || lastname=="")
+{
+document.getElementById("lastname").innerHTML=" *Name cant be blank";
+return false;
+}
+else if(atpos<1 ||(dotpos-atpos<2))
+{
+document.getElementById("email").innerHTML="*Please enter correct email id";
+document.myform.email.focus();
+return false;
+}
+else if(password.length<6)
+{
+document.getElementById("password").innerHTML="*Password must be at least 6 characters long.";
+return false;
+}
+return true;
+
+}
+</script>
+<center>
+<p><img id="c" src="is (1).jpg"></p>
+<p id="h">Make the most of your professional life</p><div class="a">
+<h2 id="b"><i><b>SignUp</i></b></h2>
+<hr>
+<form id="d" name="myform" method="post" action="www.facebook.com" onsubmit="return validateform()">
+First Name<br><input id="user" type="text" name="firstname"><br>
+<span id="username"></span><br>
+Last Name<br><input id="us" type="text" name="lastname"><br>
+<span id="lastname"></span><br>
+Email<br><input id="u" type="text" name="email"><br>
+<span id="email"></span><br>
+Password<br><input id="pass" type="password" name="password"><br>
+<span id="password"></span><br>
+<p>By clicking Join now,you will agree to Linkedin's <b>User Agreement Privacy Policy</b></p>
+<button id="f"><center><b>Join Now</b></center></button><br><hr>
+ </form>
+<p>Already on LinkedIN?<a href="C:\Users\Rakesh kumar\Desktop\login\index.html ">Log In</a></p>
+</div>
+<p id="g">LinkedIN Corporation 2016</p>
+</center>
+</body>
+</html>

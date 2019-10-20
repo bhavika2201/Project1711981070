@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+#dem
+{
+background-image:url("img.jpeg");
+}
+.a
+{
+background-color: #ffccee;
+height:300px;
+width:400px;
+margin-top:15px;
+padding:20px;
+box-shadow:0px 0px 20px dodgerblue;
+}
+#b
+{
+font-family:serif;
+}
+#c
+{
+font-size:20;
+height:80px;
+width:300px
+}
+#d
+{
+text-align:left;
+}
+
+#f
+{
+background-color:#0000e6;
+color:white;
+width:350px;
+}
+@media(max-width:1000px)
+{
+.demo
+{
+background-color:pink;
+width:100px;
+}
+}
+#u
+{
+width:350px;
+}
+#pass
+{
+width:350px;
+}
+#email
+{
+color:red;
+}
+#password
+{
+color:red;
+}
+</style>
+</head>
+<body id="dem">
+<script>
+function validateform()
+{
+var password=document.getElementById("pass").value;
+var email=document.getElementById("u").value;
+atpos=email.indexOf("@");
+dotpos=email.lastIndexOf(".");
+if(password.length<6)
+{
+document.getElementById("password").innerHTML="*Password must be at least 6 characters long.";
+return false;
+}
+else if(atpos<1 ||(dotpos-atpos<2))
+{
+document.getElementById("email").innerHTML="*Please enter correct email id";
+document.myform.email.focus();
+return false;
+}
+return true;
+
+}
+</script>
+<center>
+<br>
+<p><img id="c" src="is (1).jpg"></p><br>
+<div class="a">
+<h2 id="b"><i><b>LOGIN</i></b></h2>
+<hr>
+<form id="d" name="myform" method="post" action="www.facebook.com" onsubmit="return validateform()">
+Email<br><input id="u" type="text" name="email"><br>
+<span id="email"></span><br>
+Password<br><input id="pass" type="password" name="password"><br>
+<span id="password"></span><br>
+<button id="f"><center><b>Sign In</b></center></button><br><hr>
+ </form>
+<p>Not a member?<a href="C:\Users\Rakesh kumar\Desktop\sign up\index.html">Join Now</a></p>
+</div>
+</center>
+</body>
+</html>
